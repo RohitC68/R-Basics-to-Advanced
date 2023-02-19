@@ -34,7 +34,7 @@ library(ggplot2)
 view(mtcars)
 View(mtcars)
 
-p = ggplot(mtcars, aes(x=wt, y=mpg)) ##initalizing data layer
+p <- ggplot(mtcars, aes(x = wt, y = mpg) ) ##initalizing data layer
 print(p) ##geometric layer addition is pending
 
 p + geom_point()
