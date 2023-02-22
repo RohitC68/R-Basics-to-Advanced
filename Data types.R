@@ -108,7 +108,8 @@ str(my_matrix4)
 my_matrix4[1,2]
 
 
-#### Data frame rectangular arrangement of lists with each sublists of same length ####
+#### Data frame rectangular arrangement of lists ###
+#### with each sublists of same length ####
 #creating a dataframe manually#
 ID = c('A', 'B', 'C')
 Age = c(21,22,23)
@@ -118,3 +119,40 @@ print(sData)
 #Assigning names to the rows and columns of data frames#
 rownames(sData) = c('John', 'Sam', 'Paul')
 print(sData)
+colnames(sData) = c('ID','Age','Height')
+print(sData)
+
+##printing structure of dataframe##
+str(sData)
+#1st 2 rows#
+head(sData, 2)
+#last 2 rows#
+tail(sData,2)
+#dimension of data#
+dim(sData)
+#rows in data#
+nrow(sData)
+#columns in data#
+ncol(sData)
+#Accessing data in slots#
+sData$Age --accessing slot--
+sData[['Age']]
+sData['Age'] --accessing column--
+#access a particular row#
+sData['John',]
+#access multiple columns#
+sData[c('ID','Age')]
+
+#### Factor Data Structure ####
+-- it is a vector that can contain only pre-defined values --
+-- it is used to store only categorical data --
+
+gender = factor(c('male','male','female','female'))
+print(gender)
+
+# inbuilt functions in factors #
+levels(gender)
+
+# modify a gender #
+gender[1] = 'female'
+print(gender)
